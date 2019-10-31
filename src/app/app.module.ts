@@ -7,12 +7,18 @@ import { LoginComponent } from './login/login.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ReportingComponent } from './reporting/reporting.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { CommandCenterComponent } from './command-center/command-center.component';
+import { CommandDetailsComponent } from './command-details/command-details.component';
+import { CommandResultComponent } from './command-result/command-result.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomePageComponent,
-    ReportingComponent
+    ReportingComponent,
+    CommandCenterComponent,
+    CommandDetailsComponent,
+    CommandResultComponent
   ],
   imports: [
     BrowserModule,
