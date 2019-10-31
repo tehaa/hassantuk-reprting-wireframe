@@ -5,9 +5,9 @@ import { CommandCenterComponent } from './command-center/command-center.componen
 
 
 const routes: Routes = [
-  { path: "login", component: LoginComponent },
-  { path: "", component: LoginComponent },
-  { path: "command-center", component: CommandCenterComponent }
+  { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent },
+  { path: 'command-center', component: CommandCenterComponent }
 ];
 
 @NgModule({

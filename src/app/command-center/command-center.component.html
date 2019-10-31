@@ -1,1 +1,56 @@
-<p>command-center works!</p>
+<div class="container row align-content-center pt-5 mr-3">
+  <div class=" container col-3">
+    <div ngbDropdown class="d-inline-block">
+      <button
+        class="btn btn-outline-primary"
+        id="dropdownBasic1"
+        ngbDropdownToggle
+      >
+        vendor
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem>ROMTECH</button>
+      </div>
+    </div>
+  </div>
+
+  <div class=" container col-3">
+    <div ngbDropdown class="d-inline-block">
+      <button
+        class="btn btn-outline-primary"
+        id="dropdownBasic1"
+        ngbDropdownToggle
+      >
+        Command
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem>Retrieve Device Information</button>
+        <button ngbDropdownItem>Device Communication</button>
+        <button ngbDropdownItem>Device Restart request</button>
+        <button ngbDropdownItem>Point Report</button>
+        <button ngbDropdownItem>Point Flags</button>
+        <button ngbDropdownItem>Write Flag</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=" container row align-content-center pt-3 mr-3">
+  <div class="container col-3">
+    <input
+      class="form-control form-control-lg pl-2"
+      type="text"
+      placeholder="ATE Tag Number"
+    />
+  </div>
+  <div class="container col-3">
+    <input
+      class="form-control form-control-lg "
+      type="text"
+      placeholder="Mac Address"
+    />
+  </div>
+  <div class="container col-3">
+    <button type="button" class="btn btn-lg btn-outline-primary">Sreach</button>
+  </div>
+</div>
