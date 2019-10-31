@@ -1,0 +1,11 @@
+.login-form{
+    width: 30%;
+    align-items: center;
+    margin: 10% auto;
+}
+.logo {
+    background-image:  url("/assets/hassantuk.png");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    height: 180px;
+}
