@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: "", component: LoginComponent },
   { path: "command-center", component: CommandCenterComponent },
   { path: "main", component: HomePageComponent }
+
 ];
 
 @NgModule({
