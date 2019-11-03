@@ -1,3 +1,4 @@
+import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -7,7 +8,8 @@ import { CommandCenterComponent } from './command-center/command-center.componen
 const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "", component: LoginComponent },
-  { path: "command-center", component: CommandCenterComponent }
+  { path: "command-center", component: CommandCenterComponent },
+  { path: "main", component: HomePageComponent }
 ];
 
 @NgModule({

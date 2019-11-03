@@ -1,0 +1,18 @@
+
+.nav-link[data-toggle].collapsed:after {
+    content: "▾";
+}
+.nav-link[data-toggle]:not(.collapsed):after {
+    content: "▴";
+}
+#navbar-header{
+    background-color: #007bff !important; 
+    background-image:  url("/assets/du-small.png");
+    background-repeat: no-repeat;
+background-position: left;
+
+}
+#navbar-title{
+    color: cornsilk !important;
+    padding-left: 30px;
+}

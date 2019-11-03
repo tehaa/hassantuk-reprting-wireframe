@@ -1,10 +1,11 @@
 .login-form{
     width: 30%;
     align-items: center;
-    margin: 10% auto;
+    margin-left: 35%;
+    margin-top: 5%;
 }
 .logo {
-    background-image:  url("/assets/hassantuk.png");
+    background-image:  url("/assets/du3.png");
     background-repeat: no-repeat;
     background-position: 50% 0;
     height: 180px;
