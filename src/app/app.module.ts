@@ -10,6 +10,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CommandCenterComponent } from './command-center/command-center.component';
 import { CommandDetailsComponent } from './command-details/command-details.component';
 import { CommandResultComponent } from './command-result/command-result.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,7 @@ import { CommandResultComponent } from './command-result/command-result.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,NgbModule
+    AppRoutingModule,NgbModule,AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
