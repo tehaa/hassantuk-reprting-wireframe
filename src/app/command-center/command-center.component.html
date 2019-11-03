@@ -1,5 +1,6 @@
-<div class="container row align-content-center pt-5 mr-3">
-  <div class=" container col-3">
+<!-- select vendor and command -->
+<div class=" main-div container row align-content-start pt-3 pd-3 mr-3">
+  <div class=" container col-6">
     <div ngbDropdown class="d-inline-block">
       <button
         class="btn btn-outline-primary"
@@ -9,12 +10,14 @@
         vendor
       </button>
       <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button ngbDropdownItem>ROMTECH</button>
+        <button ngbDropdownItem (click)="this.selectVendor()">
+          ROMTECH
+        </button>
       </div>
     </div>
   </div>
 
-  <div class=" container col-3">
+  <div class=" container col-6">
     <div ngbDropdown class="d-inline-block">
       <button
         class="btn btn-outline-primary"
@@ -35,22 +38,49 @@
   </div>
 </div>
 
-<div class=" container row align-content-center pt-3 mr-3">
-  <div class="container col-3">
+<!-- Search For Device  -->
+<div class="container row  align-content-center pt-5">
+  <div class="container col-4">
     <input
       class="form-control form-control-lg pl-2"
       type="text"
       placeholder="ATE Tag Number"
     />
   </div>
-  <div class="container col-3">
+  <div class="container col-4">
     <input
       class="form-control form-control-lg "
       type="text"
       placeholder="Mac Address"
     />
   </div>
-  <div class="container col-3">
+  <div class="container pr-3 col-4">
     <button type="button" class="btn btn-lg btn-outline-primary">Sreach</button>
   </div>
+</div>
+
+<!-- table of selected Devices -->
+<div class=" pl-3 pr-5 pt-5 ">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Device ID</th>
+        <th scope="col">Mac Address</th>
+        <th scope="col">Tag Number</th>
+        <th scope="col">Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let device of devices; index as i">
+        <td>
+          {{ device.id }}
+        </td>
+        <td>{{ device.macAdress }}</td>
+        <td>{{ device.tagNumber }}</td>
+        <td>
+          <button type="button" class="btn btn-outline-danger">X</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
