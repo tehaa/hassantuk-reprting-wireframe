@@ -1,6 +1,6 @@
 <!-- select vendor and command -->
-<div class=" main-div container row align-content-start pt-3 pd-3 mr-3">
-  <div class=" container col-6">
+<div class="container row align-content-start pt-3 pd-3 mr-3">
+  <div class="col-3">
     <div ngbDropdown class="d-inline-block">
       <button
         class="btn btn-outline-primary"
@@ -17,7 +17,7 @@
     </div>
   </div>
 
-  <div class=" container col-6">
+  <div class="col-3">
     <div ngbDropdown class="d-inline-block">
       <button
         class="btn btn-outline-primary"
@@ -39,32 +39,34 @@
 </div>
 
 <!-- Search For Device  -->
-<div class="container row  align-content-center pt-5">
-  <div class="container col-4">
+<div class="container row  align-content-center pt-3">
+  <div class="col-3">
     <input
-      class="form-control form-control-lg pl-2"
+      class="form-control form-control-range pl-2"
       type="text"
       placeholder="ATE Tag Number"
     />
   </div>
-  <div class="container col-4">
+  <div class=" nopadding col-3">
     <input
-      class="form-control form-control-lg "
+      class="form-control form-control-range"
       type="text"
       placeholder="Mac Address"
     />
   </div>
-  <div class="container pr-3 col-4">
-    <button type="button" class="btn btn-lg btn-outline-primary">Sreach</button>
+  <div class=" pr-3 col-2  ">
+    <button type="button" class="btn btn-outline-primary ml-3">
+      Sreach
+    </button>
   </div>
 </div>
 
 <!-- table of selected Devices -->
-<div class=" pl-3 pr-5 pt-5 ">
-  <table class="table table-striped">
+<div class=" pl-3 pr-5 pt-3">
+  <table class="table table-bordered table-hover table-striped w-50 ">
     <thead>
       <tr>
-        <th scope="col">Device ID</th>
+        <!-- <th scope="col">Device ID</th> -->
         <th scope="col">Mac Address</th>
         <th scope="col">Tag Number</th>
         <th scope="col">Remove</th>
@@ -72,9 +74,9 @@
     </thead>
     <tbody>
       <tr *ngFor="let device of devices; index as i">
-        <td>
+        <!-- <td>
           {{ device.id }}
-        </td>
+        </td> -->
         <td>{{ device.macAdress }}</td>
         <td>{{ device.tagNumber }}</td>
         <td>
@@ -84,3 +86,9 @@
     </tbody>
   </table>
 </div>
+
+<!-- <div class="container row pt-3 pl-5">
+  <div class="col-md-10 bs-linebreak"></div>
+</div> -->
+
+<app-command-details></app-command-details>

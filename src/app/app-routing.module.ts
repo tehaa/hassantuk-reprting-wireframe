@@ -12,6 +12,8 @@ const routes: Routes = [
   { path: "command-center", component: CommandCenterComponent },
   { path: "main", component: HomePageComponent },
   { path: "report", component: ReportingComponent }
+
+
 ];
 
 @NgModule({

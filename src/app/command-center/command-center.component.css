@@ -1,7 +1,13 @@
-/* .main-div {
-  background: #ea4623;
+/* Table hover color */
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+  background-color: #89cff0;
 }
 
-.search-div {
-  background: #5fea23;
-} */
+.bs-linebreak {
+  height: 3px;
+  background-color: darkgray;
+}
+.nopadding {
+  padding-right: 0 !important;
+}

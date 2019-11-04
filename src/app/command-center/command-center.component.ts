@@ -39,6 +39,8 @@ const DEVICES: Device[] = [
 export class CommandCenterComponent implements OnInit {
 
   vendor: 'nnnn';
+  devices = DEVICES;
+
   constructor() { }
 
   ngOnInit() {
@@ -46,6 +48,4 @@ export class CommandCenterComponent implements OnInit {
   selectVendor() {
     console.log('select vendor ....... ');
   }
-  devices = DEVICES;
-
 }
