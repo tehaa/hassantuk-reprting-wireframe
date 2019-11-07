@@ -10,15 +10,19 @@
         <div ngbDropdown class="d-inline-block">
           <button
             class="btn btn-outline-primary"
-            id="dropdownBasic1"
+            id="pointTypeMenu"
             ngbDropdownToggle
           >
-            Point Type
+            {{ selectedPointType }}
           </button>
-          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <button ngbDropdownItem>input</button>
-            <button ngbDropdownItem>status</button>
-            <button ngbDropdownItem>bms</button>
+          <div ngbDropdownMenu aria-labelledby="pointTypeMenu">
+            <button
+              ngbDropdownItem
+              *ngFor="let pointType of pointTypes"
+              (click)="selectPointType(pointType)"
+            >
+              {{ pointType }}
+            </button>
           </div>
         </div>
       </div>
@@ -35,16 +39,19 @@
         <div ngbDropdown class="d-inline-block">
           <button
             class="btn btn-outline-primary"
-            id="dropdownBasic1"
+            id="pointFlagMenu"
             ngbDropdownToggle
           >
-            Point Flag
+            {{ selectedPointFlag }}
           </button>
-          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <button ngbDropdownItem>disabled</button>
-            <button ngbDropdownItem>out-of-service</button>
-            <button ngbDropdownItem>invert-polarity</button>
-            <button ngbDropdownItem>send-extrainfo</button>
+          <div ngbDropdownMenu aria-labelledby="pointFlagMenu">
+            <button
+              ngbDropdownItem
+              *ngFor="let pointFlag of pointFlags"
+              (click)="selectPointFlag(pointFlag)"
+            >
+              {{ pointFlag }}
+            </button>
           </div>
         </div>
       </div>

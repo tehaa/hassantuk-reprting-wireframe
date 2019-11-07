@@ -44,6 +44,7 @@ const RESPONSEDATA: Response[] = [
   }
 ];
 
+
 @Component({
   selector: 'app-command-details',
   templateUrl: './command-details.component.html',
@@ -51,10 +52,25 @@ const RESPONSEDATA: Response[] = [
 })
 export class CommandDetailsComponent implements OnInit {
 
+  pointTypes: string[] = ['input', 'status', 'bms'];
+  selectedPointType = 'Point Type';
+
+  pointFlags: string[] = ['disabled', 'out-of-service', 'invert-polarity', 'send-extrainfo'];
+  selectedPointFlag = 'Point Flag';
+
   responseData = RESPONSEDATA;
   constructor() { }
 
   ngOnInit() {
   }
 
+  selectPointType(selectedPointType: string) {
+    this.selectedPointType = selectedPointType;
+    console.log('selected point type ....... ' + this.selectedPointType);
+  }
+
+  selectPointFlag(selectedPointFlag: string) {
+    this.selectedPointFlag = selectedPointFlag;
+    console.log('selected point flag ....... ' + this.selectedPointFlag);
+  }
 }

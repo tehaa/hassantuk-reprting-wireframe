@@ -2,16 +2,16 @@
 <div class="container row align-content-start pt-3 pd-3 mr-3">
   <div class="col-3">
     <div ngbDropdown class="d-inline-block">
-      <button
-        class="btn btn-outline-primary"
-        id="dropdownBasic1"
-        ngbDropdownToggle
-      >
-        vendor
+      <button class="btn btn-outline-primary" id="vendorMenu" ngbDropdownToggle>
+        {{ selectedVendor }}
       </button>
-      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button ngbDropdownItem (click)="this.selectVendor()">
-          ROMTECH
+      <div ngbDropdownMenu aria-labelledby="vendorMenu">
+        <button
+          ngbDropdownItem
+          *ngFor="let vendor of vendors"
+          (click)="selectVendor(vendor)"
+        >
+          {{ vendor }}
         </button>
       </div>
     </div>
@@ -21,18 +21,19 @@
     <div ngbDropdown class="d-inline-block">
       <button
         class="btn btn-outline-primary"
-        id="dropdownBasic1"
+        id="commandMenu"
         ngbDropdownToggle
       >
-        Command
+        {{ selectedCommand }}
       </button>
-      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button ngbDropdownItem>Retrieve Device Information</button>
-        <button ngbDropdownItem>Device Communication</button>
-        <button ngbDropdownItem>Device Restart request</button>
-        <button ngbDropdownItem>Point Report</button>
-        <button ngbDropdownItem>Point Flags</button>
-        <button ngbDropdownItem>Write Flag</button>
+      <div ngbDropdownMenu aria-labelledby="commandMenu">
+        <button
+          ngbDropdownItem
+          *ngFor="let command of commands"
+          (click)="selectCommand(command)"
+        >
+          {{ command }}
+        </button>
       </div>
     </div>
   </div>

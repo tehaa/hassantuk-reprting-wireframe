@@ -38,14 +38,25 @@ const DEVICES: Device[] = [
 })
 export class CommandCenterComponent implements OnInit {
 
-  vendor: 'nnnn';
   devices = DEVICES;
+  vendors: string[] = ['ROMTECH'];
+  commands: string[] = ['Retrieve Device Information', 'Device Communication',
+    'Device Restart request', 'Point Report', 'Point Flags', 'Write Flag'];
+  selectedVendor = 'Vendor';
+  selectedCommand = 'Command';
 
   constructor() { }
 
   ngOnInit() {
   }
-  selectVendor() {
-    console.log('select vendor ....... ');
+  selectVendor(selectedVendor: string) {
+    this.selectedVendor = selectedVendor;
+    console.log('selected vendor ....... ' + this.selectedVendor);
+  }
+
+  selectCommand(selectedCommand: string) {
+    this.selectedCommand = selectedCommand;
+    console.log('selected command ....... ' + this.selectedCommand);
+
   }
 }
