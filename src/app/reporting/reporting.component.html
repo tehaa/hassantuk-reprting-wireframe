@@ -1,1 +1,59 @@
-<p>reporting works!</p>
+
+<div class="form-group row" style=" padding-left: 15px;" >
+        <input  class="form-control col"   placeholder="Device Tag Number">
+        <input  class="form-control col"  style="margin-left: 1%; margin-right: 1%;" placeholder="Device Mac Address">
+        <input class="form-control col" placeholder="From Date"
+        name="dp1" [(ngModel)]="modelFrom" ngbDatepicker #d="ngbDatepicker">
+        <div class="input-group-append">
+                <button class="btn btn-outline-secondary calendar cal"  (click)="d.toggle()" type="button"></button>
+              </div>
+              <input class="form-control col" placeholder="From Date" style="margin-left: 1%;"
+              name="dp2" [(ngModel)]="modelTo" ngbDatepicker #d1="ngbDatepicker">
+              <div class="input-group-append">
+                      <button class="btn btn-outline-secondary calendar cal"   (click)="d1.toggle()" type="button"></button>
+                    </div>
+                    <button style="margin-left: 1%;" type="Login" class="btn btn-primary form-control col" (click)="login()">Search</button>
+
+            
+    </div>
+    <h4 style="color: cornflowerblue;"> ATE Logs Report</h4>
+<table class="table table-striped" style="margin-top: 15;"> 
+        <thead>
+        <tr>
+          <th scope="col">ATE Tag Number</th>
+          <th scope="col">ATE Mac Address</th>
+          <th scope="col">command Type</th>
+
+          <th scope="col">User</th>
+          <th scope="col">Command sent Time</th>
+          <th scope="col">Command Recive Time</th>
+
+          <th scope="col">Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let country of countries">
+          <th scope="row">{{ country.tagNumber }}</th>
+          <td>
+           
+            {{ country.macAddress }}
+          </td>
+          <td>{{ country.commandType}}</td>
+          <td>{{ country.User}}</td>  
+          <td>{{ country.timeStampSent}}</td>
+          <td>{{ country.timeStampRecives}}</td>
+          <td>{{ country.status}}</td>
+        </tr>
+        </tbody>
+      </table>
+      
+      <div class="d-flex justify-content-between p-2">
+        <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
+        </ngb-pagination>
+      
+        <select class="custom-select" style="width: auto" [(ngModel)]="pageSize">
+          <option [ngValue]="2">2 items per page</option>
+          <option [ngValue]="4">4 items per page</option>
+          <option [ngValue]="6">6 items per page</option>
+        </select>
+    </div>

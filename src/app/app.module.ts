@@ -10,7 +10,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CommandCenterComponent } from './command-center/command-center.component';
 import { CommandDetailsComponent } from './command-details/command-details.component';
 import { CommandResultComponent } from './command-result/command-result.component';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,NgbModule,AngularFontAwesomeModule
+    AppRoutingModule,NgbModule,NgbDatepickerModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
